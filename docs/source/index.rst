@@ -65,6 +65,7 @@ If you know anything about any function, object or concept please dont hesitate 
    /native/networking
    /native/class
    /native/useful
+   /native/loadout
 
 .. toctree::
    :maxdepth: 3
