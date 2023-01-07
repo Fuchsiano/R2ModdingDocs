@@ -16,107 +16,104 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
    :widths: 25 25 50
    :header-rows: 1
 
-   * - type
-     - variable
+   * - variable
+     - type
      - description
-   * - string
-     - name
+   * - name
+     - string
      - the UI name for this loadout
-   * - string
-     - suit
+   * - suit
+     - string
      - the model the Pilot should use
-   * - string
-     - race
+   * - race
+     - string
      - wether the Pilot is male or female
-   * - string
-     - execution
+   * - execution
+     - string
      - the execution
-   * - string
-     - primary
+   * - primary
+     - string
      - the primary weapon. limited to Primary weapons NOTE: when changing this the mods and visors wont be changed so mods / visors exclusive to the gun will cause a server crash 
-   * - string
-     - primary
-     - the primary weapon 
-   * - string
-     - primaryAttachment
+   * - primaryAttachment
+     - string
      - the scope of the primary weapon
-   * - string
-     - primaryMod1
+   * - primaryMod1
+     - string
      - the first mod of the weapon **READ ONLY** e.g. fast reload 
-   * - string
-     - primaryMod2
+   * - primaryMod2
+     - string
      - the second mod of the weapon **READ ONLY** e.g. fast reload 
-   * - string
-     - primaryMod3
+   * - primaryMod3
+     - string
      - the third mod of the weapon **READ ONLY** e.g. fast reload. Normaly Titanfall uses this for the Pro-Screen but this is a normal mod slot it can hold any mod
-   * - array<string>
-     - primaryMods
+   * - primaryMods
+     - array<string>
      - the mods the gun will use **change this to edit weapon mods**        
-   * - string
-     - primaryAttachments
+   * - primaryAttachments
+     - string
      - the Attachments a primary gun has e.g. scopes. Titanfall edits this array so you need to use the clone keyword 
-   * - string
-     - secondary
+   * - secondary
+     - string
      - the secondary weapon, ether a pistol or anti titan weapon but can also hold a primary weapon 
-   * - string
-     - secondaryMod1
+   * - secondaryMod1
+     - string
      - the first mod of the weapon **READ ONLY** e.g. fast reload 
-   * - string
-     - secondaryMod2
+   * - secondaryMod2
+     - string
      - the second mod of the weapon **READ ONLY** e.g. fast reload 
-   * - string
-     - secondaryMod3
+   * - secondaryMod3
+     - string
      - the third mod of the weapon **READ ONLY** e.g. fast reload 
-   * - array<string>
-     - secondaryMods
+   * - secondaryMods
+     - array<string>
      - the mods the gun will use **change this to edit weapon mods**
-   * - string
-     - weapon3
+   * - weapon3
+     - string
      - the third weapon, ether a pistol or anti titan weapon but can also hold a primary weapon 
-   * - string
-     - weapon3Mod1
+   * - weapon3Mod1
+     - string
      - the first mod of the weapon **READ ONLY** e.g. fast reload 
-   * - string
-     - weapon3Mod2
+   * - weapon3Mod2
+     - string
      - the second mod of the weapon **READ ONLY** e.g. fast reload 
-   * - string
-     - weapon3Mod3
+   * - weapon3Mod3
+     - string
      - the third mod of the weapon **READ ONLY** e.g. fast reload 
-   * - array<string>
-     - weapon3Mods
+   * - weapon3Mods
+     - array<string>
      - the mods the gun will use **change this to edit weapon mods**
-   * - string
-     - ordnance
+   * - ordnance
+     - string
      - the grenade the pilot uses e.g. frag grenade 
-   * - string
-     - passive1
+   * - passive1
+     - string
      - the first kit the pilot uses e.g. fast regen 
-   * - string
-     - passive2
+   * - passive2
+     - string
      - the second kit the pilot uses e.g. kill report
-   * - int
-     - skinIndex
+   * - skinIndex
+     - int
      - the skin the pilot uses 
-   * - int
-     - camoIndex
+   * - camoIndex
+     - int
      - the colors the pilot uses
-   * - int
-     - primarySkinIndex
+   * - primarySkinIndex
+     - int
      - the skin the gun uses e.g. Masterworks kraber or the default skin
-   * - int
-     - primaryCamoIndex
+   * - primaryCamoIndex
+     - int
      - the colors the gun uses
-   * - int
-     - secondarySkinIndex
+   * - secondarySkinIndex
+     - int
      - the skin the gun uses e.g. Masterworks kraber or the default skin
-   * - int
-     - secondaryCamoIndex
+   * - secondaryCamoIndex
+     - int
      - the colors the gun uses
-   * - int
-     - weapon3SkinIndex
+   * - weapon3SkinIndex
+     - int
      - the skin the gun uses e.g. Masterworks kraber or the default skin
-   * - int
-     - weapon3CamoIndex
+   * - weapon3CamoIndex
+     - int
      - the colors the gun uses
 
 
@@ -246,7 +243,7 @@ variation 3
 Examples
 ===========================================
 
-The `Interstellar.BanMod <https://github.com/Neoministein/Interstellar.BanSystem >` is just using loadouts to ban weapons and equipment.
+The `Interstellar.BanMod <https://github.com/Neoministein/Interstellar.BanSystem/blob/master/Interstellar.BanSystem/mod/scripts/vscripts/_banLogic.gnut >` is just using loadouts to ban weapons and equipment.
 
 Example "Pilot classes"
 ^^^^^^^^^^^^^^^^^^^^^^^^
