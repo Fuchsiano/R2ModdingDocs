@@ -39,15 +39,19 @@ First of all you should always use the variations sparingly to not trigger Callb
 Second you should always use the clone keyword when you want to edit the loadout, without creating a clone of the loadout in memory you would change the loadout permanently.     
 
 variation 1 
+
 .. code-block:: javascript
+	
 	// get the active Pilot / Titan loadouts 
 	PilotLoadoutDef function GetActivePilotLoadout( entity player )
 
 	TitanLoadoutDef function GetActiveTitanLoadout( entity player )
-	
+
 
 variation 2
+
 .. code-block:: javascript
+
 	// get the loadout at index from all loadouts the player has
 	/*Note: 
 		a player has 10 Pilot loadouts
@@ -59,7 +63,9 @@ variation 2
 
 
 variation 3
+
 .. code-block:: javascript
+
 	//there are Callbacks for when the player updates his loadout  
 	void function AddCallback_OnUpdateDerivedPilotLoadout( void functionref( PilotLoadoutDef newPilotLoadout ) callbackFunc )
 
