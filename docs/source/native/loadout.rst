@@ -33,7 +33,24 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
    * - string
      - primary
      - the primary weapon. limited to Primary weapons NOTE: when changing this the mods and visors wont be changed so mods / visors exclusive to the gun will cause a server crash 
-	 	 
+   * - string
+	 - primary
+	 - the primary weapon 
+   * - string
+	 - primaryAttachment
+	 - the scope of the primary weapon
+   * - string
+	 - primaryMod1
+	 - the first mod of the weapon **READ ONLY** e.g. fast reload 
+   * - string
+	 - primaryMod2
+	 - the second mod of the weapon **READ ONLY** e.g. fast reload 
+   * - string
+	 - primaryMod3
+	 - the third mod of the weapon **READ ONLY** e.g. fast reload. Normaly Titanfall uses this for the Pro-Screen but this is a normal mod slot it can hold any mod
+   * - array<string>
+	 - primaryMods
+	 - the mods the gun will use **change this to edit weapon mods**	 	 
 .. list-table:: PilotLoadoutDef
    :widths: 25 25 50
    :header-rows: 1
