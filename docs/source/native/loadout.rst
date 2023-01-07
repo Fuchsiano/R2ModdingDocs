@@ -116,7 +116,8 @@ PilotLoadoutDef
 	  - primaryMod3
 	  - the third mod of the weapon **READ ONLY** e.g. fast reload
 
-string 			secondary
+string 			
+secondary
 string 			secondaryMod1
 string 			secondaryMod2
 string 			secondaryMod3
