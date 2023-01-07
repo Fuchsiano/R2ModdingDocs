@@ -11,6 +11,20 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
 * They are used to persist the loadout.
 * They are **NOT** used to change a weapon on the fly 
 
+.. list-table:: Title
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Heading row 1, column 1
+     - Heading row 1, column 2
+     - Heading row 1, column 3
+   * - Row 1, column 1
+     -
+     - Row 1, column 3
+   * - Row 2, column 1
+     - Row 2, column 2
+     - Row 2, column 3
+
 .. list-table:: PilotLoadoutDef
    :widths: 25 25 50
    :header-rows: 1
