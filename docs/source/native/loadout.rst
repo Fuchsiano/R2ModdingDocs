@@ -28,8 +28,8 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
 .. list-table:: PilotLoadoutDef
    :widths: 25 25 50
    :header-rows: 1
-
-* - type
+   
+   * - type
      - variable
      - description
    * - string
