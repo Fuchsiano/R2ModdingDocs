@@ -32,7 +32,7 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
      - the execution
    * - string
      - primary
-     - The primary weapon NOTE: mods and visors will remain. if a mod / visor was weapon exclusive it'll cause a server crash
+     - the primary weapon. limited to Primary weapons NOTE: when changing this the mods and visors wont be changed so mods / visors exclusive to the gun will cause a server crash 
 	 	 
 .. list-table:: PilotLoadoutDef
    :widths: 25 25 50
