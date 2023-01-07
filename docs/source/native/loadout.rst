@@ -104,20 +104,20 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
 	   - primarySkinIndex
 	   - the skin the gun uses e.g. Masterworks kraber or the default skin
    * - int
-	   - primaryCamoIndex
-	   - the colors the gun uses
+	 - primaryCamoIndex
+	 - the colors the gun uses
    * - int
-	   - secondarySkinIndex
-	   - the skin the gun uses e.g. Masterworks kraber or the default skin
+	 - secondarySkinIndex
+	 - the skin the gun uses e.g. Masterworks kraber or the default skin
    * - int
-	   - secondaryCamoIndex
-	   - the colors the gun uses
+	 - secondaryCamoIndex
+	 - the colors the gun uses
    * - int
-	   - weapon3SkinIndex
-	   - the skin the gun uses e.g. Masterworks kraber or the default skin
+	 - weapon3SkinIndex
+	 - the skin the gun uses e.g. Masterworks kraber or the default skin
    * - int
-	   - weapon3CamoIndex
-	   - the colors the gun uses
+	 - weapon3CamoIndex
+	 - the colors the gun uses
 
 
 
