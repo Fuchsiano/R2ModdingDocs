@@ -11,7 +11,7 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
 * They are used to persist the loadout.
 * They are **NOT** used to change a weapon on the fly 
 
-.. list-table:: Title
+.. list-table:: PilotLoadoutDef
    :widths: 25 25 50
    :header-rows: 1
 
@@ -34,51 +34,93 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
      - primary
      - the primary weapon. limited to Primary weapons NOTE: when changing this the mods and visors wont be changed so mods / visors exclusive to the gun will cause a server crash 
    * - string
-	 - primary
-	 - the primary weapon 
+	   - primary
+	   - the primary weapon 
    * - string
-	 - primaryAttachment
-	 - the scope of the primary weapon
+	   - primaryAttachment
+	   - the scope of the primary weapon
    * - string
-	 - primaryMod1
-	 - the first mod of the weapon **READ ONLY** e.g. fast reload 
+	   - primaryMod1
+	   - the first mod of the weapon **READ ONLY** e.g. fast reload 
    * - string
-	 - primaryMod2
-	 - the second mod of the weapon **READ ONLY** e.g. fast reload 
+	   - primaryMod2
+	   - the second mod of the weapon **READ ONLY** e.g. fast reload 
    * - string
-	 - primaryMod3
-	 - the third mod of the weapon **READ ONLY** e.g. fast reload. Normaly Titanfall uses this for the Pro-Screen but this is a normal mod slot it can hold any mod
+	   - primaryMod3
+	   - the third mod of the weapon **READ ONLY** e.g. fast reload. Normaly Titanfall uses this for the Pro-Screen but this is a normal mod slot it can hold any mod
    * - array<string>
-	 - primaryMods
-	 - the mods the gun will use **change this to edit weapon mods**	 	 
-.. list-table:: PilotLoadoutDef
-   :widths: 25 25 50
-   :header-rows: 1
-   
-   * - type
-     - variable
-     - description
+	   - primaryMods
+	   - the mods the gun will use **change this to edit weapon mods**	 	 
    * - string
-     - name
-     - the UI name for this loadout
+	   - primaryAttachments
+	   - the Attachments a primary gun has e.g. scopes. Titanfall edits this array so you need to use the clone keyword 
    * - string
-     - suit
-     - the model the Pilot should use   
+	   - secondary
+	   - the secondary weapon, ether a pistol or anti titan weapon but can also hold a primary weapon 
    * - string
-     - race
-     - wether the Pilot is male or female
+	   - secondaryMod1
+	   - the first mod of the weapon **READ ONLY** e.g. fast reload 
    * - string
-     - execution
-     - the execution
+	   - secondaryMod2
+	   - the second mod of the weapon **READ ONLY** e.g. fast reload 
    * - string
-     - primary
-     - the primary weapon. limited to Primary weapons NOTE: when changing this the mods and visors wont be changed so mods / visors exclusive to the gun will cause a server crash 
+	   - secondaryMod3
+	   - the third mod of the weapon **READ ONLY** e.g. fast reload 
+   * - array<string>
+	   - secondaryMods
+	   - the mods the gun will use **change this to edit weapon mods**
    * - string
-	 - primary
-	 - the primary weapon 
+	   - weapon3
+	   - the third weapon, ether a pistol or anti titan weapon but can also hold a primary weapon 
+   * - string
+	   - weapon3Mod1
+	   - the first mod of the weapon **READ ONLY** e.g. fast reload 
+   * - string
+	   - weapon3Mod2
+	   - the second mod of the weapon **READ ONLY** e.g. fast reload 
+   * - string
+	   - weapon3Mod3
+	   - the third mod of the weapon **READ ONLY** e.g. fast reload 
+   * - array<string>
+	   - weapon3Mods
+	   - the mods the gun will use **change this to edit weapon mods**
+   * - string
+	   - ordnance
+	   - the grenade the pilot uses e.g. frag grenade 
+   * - string
+	   - passive1
+	   - the first kit the pilot uses e.g. fast regen 
+   * - string
+	   - passive2
+	   - the second kit the pilot uses e.g. kill report
+   * - int
+	   - skinIndex
+	   - the skin the pilot uses 
+   * - int
+	   - camoIndex
+	   - the colors the pilot uses
+   * - int
+	   - primarySkinIndex
+	   - the skin the gun uses e.g. Masterworks kraber or the default skin
+   * - int
+	   - primaryCamoIndex
+	   - the colors the gun uses
+   * - int
+	   - secondarySkinIndex
+	   - the skin the gun uses e.g. Masterworks kraber or the default skin
+   * - int
+	   - secondaryCamoIndex
+	   - the colors the gun uses
+   * - int
+	   - weapon3SkinIndex
+	   - the skin the gun uses e.g. Masterworks kraber or the default skin
+   * - int
+	   - weapon3CamoIndex
+	   - the colors the gun uses
 
 
-.. list-table:: Title
+
+.. list-table:: TitanLoadoutDef
    :widths: 25 25 50
    :header-rows: 1
 
