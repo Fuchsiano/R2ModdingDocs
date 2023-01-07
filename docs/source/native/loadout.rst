@@ -86,27 +86,22 @@ PilotLoadoutDef
    :widths: 25 25 50
    :header-rows: 1
 
-* 
-	- type
-    - variable
-    - description
-* 
-	- string
-	- name
-	- the UI name for this loadout
+* - type
+  - variable
+  - description
+* - string
+  - name
+  - the UI name for this loadout
 
-*
-	- string
-	- suit
-	- the model the Pilot should use
-*
-	- string
-	- race
-	- wether the Pilot is male or female 
-*
-	- string
-	- execution
-	- the execution
+* - string
+  - suit
+  - the model the Pilot should use
+* - string
+  - race
+  - wether the Pilot is male or female 
+* - string
+  - execution
+  - the execution
 *
 	- string
 	- primary
