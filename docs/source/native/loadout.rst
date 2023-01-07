@@ -10,7 +10,8 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
 * They are used to define a loadout a titan or pilot can spawn with.
 * They are used to persist the loadout.
 * They are **NOT** used to change a weapon on the fly 
-
+ wut 
+ 
 .. list-table:: PilotLoadoutDef
    :widths: 25 25 50
    :header-rows: 1
