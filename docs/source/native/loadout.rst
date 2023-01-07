@@ -12,10 +12,10 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
 * They are **NOT** used to change a weapon on the fly 
 
 PilotLoadoutDef
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 .. list-table:: Title
-   :widths: 25 25 50
+   :widths: 50 50 50
    :header-rows: 1
 
    * - type
@@ -193,12 +193,12 @@ The `Interstellar.BanMod <https://github.com/Neoministein/Interstellar.BanSystem
 
 Example "Pilot classes"
 ^^^^^^^^^^^^^^^^^^^^^^^^
-	a gamemode where a player can select a ``class`` in UI. We can get the selected class by calling the hypothetical function "getPilotClass"
+a gamemode where a player can select a ``class`` in UI. We can get the selected class by calling the hypothetical function "getPilotClass"
 
-	the classes are 
-	* "gunner" a pilot wielding a L-star 
-	* "fastBoy"
-	* "sniper"  
+the classes are 
+* "gunner" a pilot wielding a L-star 
+* "fastBoy"
+* "sniper"  
 	
 
 Usefull stuff
