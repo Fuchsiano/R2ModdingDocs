@@ -11,13 +11,19 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
 * They are used to persist the loadout.
 * They are **NOT** used to change a weapon on the fly 
 
-PilotLoadoutDef
-^^^^^^^^^^^^^^^
-
-.. list-table:: Title
-   :widths: 50 50 50
+.. list-table:: PilotLoadoutDef
+   :widths: 25 25 50
    :header-rows: 1
 
+   * - Heading row 1, column 1
+     - Heading row 1, column 2
+     - Heading row 1, column 3
+   * - Row 1, column 1
+     -
+     - Row 1, column 3
+   * - Row 2, column 1
+     - Row 2, column 2
+     - Row 2, column 3
    * - type
      - variable
      - description
@@ -121,7 +127,6 @@ PilotLoadoutDef
 	 - weapon3CamoIndex
 	 - the colors the gun uses
 
-
 TitanLoadoutDef meanwhile contain the  
 
 ``name, titanClass, primeTitanRef, primaryMod, special,antirodeo  passive1, passive2, passive3, passive4, passive5, passive6`` thank you Monarch I want to KMS
@@ -196,6 +201,7 @@ Example "Pilot classes"
 a gamemode where a player can select a ``class`` in UI. We can get the selected class by calling the hypothetical function "getPilotClass"
 
 the classes are 
+
 * "gunner" a pilot wielding a L-star 
 * "fastBoy"
 * "sniper"  
