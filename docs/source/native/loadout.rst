@@ -22,11 +22,11 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
      - name
      - the UI name for this loadout
    * - string
-     - Row 2, column 2
+     - the primary weapon. limited to Primary weapons NOTE: when changing this the mods and visors wont be changed so mods / visors exclusive to the gun will cause a server crash 
      - Row 2, column 3
 
 .. list-table:: PilotLoadoutDef
-   :widths: 50 50 500
+   :widths: 50 50 300
    :header-rows: 1
    
    * - type
