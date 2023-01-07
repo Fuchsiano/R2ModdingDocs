@@ -25,7 +25,7 @@ and ``ordnanceAmmo`` wich is used in the sp for ordnance ammo count
 
 TitanLoadoutDef meanwhile contain the  
 
-``name, titanClass, primeTitanRef, primaryMod, special,antirodeo  passive1, passive2, passive3, passive4, passive5, passive6 `` thank you Monarch I want to KMS
+``name, titanClass, primeTitanRef, primaryMod, special,antirodeo  passive1, passive2, passive3, passive4, passive5, passive6`` thank you Monarch I want to KMS
 ``voice, skinIndex, camoIndex, decalIndex, primarySkinIndex, primaryCamoIndex, difficulty, isPrime, primeSkinIndex, primeCamoIndex, primeDecalIndex, showArmBadge`` of the titan as well as 
 ``melee, coreAbility, primary, primaryAttachment, primaryMods, ordnance, ordnanceMods, specialMods, antirodeoMods, titanExecution``
 
@@ -101,7 +101,27 @@ PilotLoadoutDef
 * - string
   - execution
   - the execution
+*
+	- string
+	- primary
+	- the primary weapon not limited to time 
 
+*
+	- string
+	- primaryAttachment
+	- the scope of the primary weapon
+*
+	- string
+	- primaryMod1
+	- the first mod of the weapon **READ ONLY** e.g. fast reload 
+*
+	- string
+	- primaryMod2
+	- the second mod of the weapon **READ ONLY** e.g. fast reload 
+*
+	- string
+	- primaryMod3
+	- the third mod of the weapon **READ ONLY** e.g. fast reload
 
 string 			secondary
 string 			secondaryMod1
@@ -144,3 +164,21 @@ IsValidTitanLoadoutProperty()
 GetChildLoadoutProperties()
 GetParentLoadoutProperty()
 PrintTitanLoadout()
+
+
+
+
+
+.. list-table:: Title
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Heading row 1, column 1
+     - Heading row 1, column 2
+     - Heading row 1, column 3
+   * - Row 1, column 1
+     -
+     - Row 1, column 3
+   * - Row 2, column 1
+     - Row 2, column 2
+     - Row 2, column 3
