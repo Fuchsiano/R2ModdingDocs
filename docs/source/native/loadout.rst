@@ -86,6 +86,20 @@ PilotLoadoutDef
    :header-rows: 1
 
    * - type
+     - variable
+     - description
+   * - string
+     - name
+     - the UI name for this loadout
+   * - string
+     - suit
+     - the model the Pilot should use
+
+.. list-table:: PilotLoadoutDef
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - type
   	 - variable
      - description
    * - string
@@ -165,12 +179,12 @@ PrintTitanLoadout()
    :widths: 25 25 50
    :header-rows: 1
 
-   * - test1 row 1, column 1
-     - Heading row 1, column 2
-     - Heading row 1, column 3
-   * - Row 1, column 1
-     - Nutttttte
-     - Row 1, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
+   * - type
+     - variable
+     - description
+   * - string
+     - name
+     - the UI name for this loadout
+   * - string
+     - suit
+     - the model the Pilot should use
