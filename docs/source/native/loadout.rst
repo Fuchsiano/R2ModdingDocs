@@ -85,36 +85,36 @@ PilotLoadoutDef
    :widths: 25 25 50
    :header-rows: 1
 
-	* - type
-  	  - variable
-      - description
-	* - string
-      - name
-      - the UI name for this loadout
-	* - string
-      - suit
-      - the model the Pilot should use
-	* - string
-      - race
-      - wether the Pilot is male or female 
-	* - string
-      - execution
-      - the execution
-	* - string
-	  - primary
-	  - the primary weapon not limited to time 
-	* - string
-	  - primaryAttachment
-	  - the scope of the primary weapon
-	* - string
-	  - primaryMod1
-	  - the first mod of the weapon **READ ONLY** e.g. fast reload 
-	* - string
-	  - primaryMod2
-	  - the second mod of the weapon **READ ONLY** e.g. fast reload 
-	* - string
-	  - primaryMod3
-	  - the third mod of the weapon **READ ONLY** e.g. fast reload
+   * - type
+  	 - variable
+     - description
+   * - string
+     - name
+     - the UI name for this loadout
+   * - string
+     - suit
+     - the model the Pilot should use
+   * - string
+     - race
+     - wether the Pilot is male or female 
+   * - string
+     - execution
+     - the execution
+   * - string
+	 - primary
+	 - the primary weapon not limited to time 
+   * - string
+	 - primaryAttachment
+	 - the scope of the primary weapon
+   * - string
+	 - primaryMod1
+	 - the first mod of the weapon **READ ONLY** e.g. fast reload 
+   * - string
+	 - primaryMod2
+	 - the second mod of the weapon **READ ONLY** e.g. fast reload 
+   * - string
+	 - primaryMod3
+	 - the third mod of the weapon **READ ONLY** e.g. fast reload
 
 string 			
 secondary
@@ -161,3 +161,16 @@ PrintTitanLoadout()
 
 
 
+.. list-table:: Title
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Heading row 1, column 1
+     - Heading row 1, column 2
+     - Heading row 1, column 3
+   * - Row 1, column 1
+     -
+     - Row 1, column 3
+   * - Row 2, column 1
+     - Row 2, column 2
+     - Row 2, column 3
