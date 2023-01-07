@@ -101,27 +101,7 @@ PilotLoadoutDef
 * - string
   - execution
   - the execution
-*
-	- string
-	- primary
-	- the primary weapon not limited to time 
 
-*
-	- string
-	- primaryAttachment
-	- the scope of the primary weapon
-*
-	- string
-	- primaryMod1
-	- the first mod of the weapon **READ ONLY** e.g. fast reload 
-*
-	- string
-	- primaryMod2
-	- the second mod of the weapon **READ ONLY** e.g. fast reload 
-*
-	- string
-	- primaryMod3
-	- the third mod of the weapon **READ ONLY** e.g. fast reload
 
 string 			secondary
 string 			secondaryMod1
@@ -148,6 +128,7 @@ Usefull stuff
 ===========================================
 
 .. code-block:: javascript
+
 	//Prints the titanloadout form player at index to the console 
 	void function PrintTitanLoadoutIndex( entity player, int index )
 
