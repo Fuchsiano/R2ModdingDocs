@@ -31,9 +31,6 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
      - execution
      - the execution
    * - string
-     - primary
-     - the primary weapon. limited to Primary weapons NOTE: when changing this the mods and visors wont be changed so mods / visors exclusive to the gun will cause a server crash 
-   * - string
 	 - primary
 	 - the primary weapon 
 	 	 
