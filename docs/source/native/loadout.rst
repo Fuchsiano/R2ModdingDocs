@@ -26,7 +26,7 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
      - Row 2, column 3
 
 .. list-table:: PilotLoadoutDef
-   :widths: 50 50 100
+   :widths: 50 50 500
    :header-rows: 1
    
    * - type
