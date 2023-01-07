@@ -15,18 +15,18 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
    :widths: 25 25 50
    :header-rows: 1
 
-   * - Heading row 1, column 1
-     - Heading row 1, column 2
-     - Heading row 1, column 3
-   * - Row 1, column 1
-     -
-     - Row 1, column 3
-   * - Row 2, column 1
+   * - type
+     - variable
+     - description
+   * - string
+     - name
+     - the UI name for this loadout
+   * - string
      - Row 2, column 2
      - Row 2, column 3
 
 .. list-table:: PilotLoadoutDef
-   :widths: 25 25 50
+   :widths: 50 50 100
    :header-rows: 1
    
    * - type
