@@ -30,9 +30,7 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
    * - string
      - execution
      - the execution
-   * - string
-	 - primary
-	 - the primary weapon 
+
 	 	 
 .. list-table:: PilotLoadoutDef
    :widths: 25 25 50
