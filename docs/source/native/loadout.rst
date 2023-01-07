@@ -11,16 +11,115 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
 * They are used to persist the loadout.
 * They are **NOT** used to change a weapon on the fly 
 
-PilotLoadoutDef contains the 
-``name, suit, race, melee, execution, ordnance, passive1, passive2, skinIndex, camoIndex`` of the pilot.
+PilotLoadoutDef
+^^^^^^^^^^^^^^^^^
 
-``primary, primaryAttachment, primaryMod1, primaryMod2, primaryMod3, primaryAttachments, primarySkinIndex, primaryCamoIndex, primaryMods`` of the primary weapon
+.. list-table:: Title
+   :widths: 25 25 50
+   :header-rows: 1
 
-``secondary, secondaryMod1, secondaryMod2, secondaryMod3, secondarySkinIndex, secondaryCamoIndex, secondaryMods`` of the secondary weapon regardless of the type (anti titan or pistol) 
-
-``weapon3, weapon3Mod1, weapon3Mod2, weapon3Mod3, weapon3SkinIndex, weapon3CamoIndex, weapon3Mods`` of the third weapon slot regardless of the type (anti titan or pistol) 
-
-and ``ordnanceAmmo`` wich is used in the sp for ordnance ammo count   
+   * - type
+     - variable
+     - description
+   * - string
+     - name
+     - the UI name for this loadout
+   * - string
+     - suit
+     - the model the Pilot should use   
+   * - string
+     - race
+     - wether the Pilot is male or female
+   * - string
+     - execution
+     - the execution
+   * - string
+     - primary
+     - the primary weapon. limited to Primary weapons NOTE: when changing this the mods and visors wont be changed so mods / visors exclusive to the gun will cause a server crash 
+   * - string
+	 - primary
+	 - the primary weapon 
+   * - string
+	 - primaryAttachment
+	 - the scope of the primary weapon
+   * - string
+	 - primaryMod1
+	 - the first mod of the weapon **READ ONLY** e.g. fast reload 
+   * - string
+	 - primaryMod2
+	 - the second mod of the weapon **READ ONLY** e.g. fast reload 
+   * - string
+	 - primaryMod3
+	 - the third mod of the weapon **READ ONLY** e.g. fast reload. Normaly Titanfall uses this for the Pro-Screen but this is a normal mod slot it can hold any mod
+   * - array<string>
+	 - primaryMods
+	 - the mods the gun will use **change this to edit weapon mods**
+   * - string
+	 - primaryAttachments
+	 - the Attachments a primary gun has e.g. scopes. Titanfall edits this array so you need to use the clone keyword 
+   * - string
+	 - secondary
+	 - the secondary weapon, ether a pistol or anti titan weapon but can also hold a primary weapon 
+   * - string
+	 - secondaryMod1
+	 - the first mod of the weapon **READ ONLY** e.g. fast reload 
+   * - string
+	 - secondaryMod2
+	 - the second mod of the weapon **READ ONLY** e.g. fast reload 
+   * - string
+	 - secondaryMod3
+	 - the third mod of the weapon **READ ONLY** e.g. fast reload 
+   * - array<string>
+	 - secondaryMods
+	 - the mods the gun will use **change this to edit weapon mods**
+   * - string
+	 - weapon3
+	 - the third weapon, ether a pistol or anti titan weapon but can also hold a primary weapon 
+   * - string
+	 - weapon3Mod1
+	 - the first mod of the weapon **READ ONLY** e.g. fast reload 
+   * - string
+	 - weapon3Mod2
+	 - the second mod of the weapon **READ ONLY** e.g. fast reload 
+   * - string
+	 - weapon3Mod3
+	 - the third mod of the weapon **READ ONLY** e.g. fast reload 
+   * - array<string>
+	 - weapon3Mods
+	 - the mods the gun will use **change this to edit weapon mods**
+   * - string
+	 - ordnance
+	 - the grenade the pilot uses e.g. frag grenade 
+   * - string
+	 - passive1
+	 - the first kit the pilot uses e.g. fast regen 
+   * - string
+	 - passive2
+	 - the second kit the pilot uses e.g. kill report
+   * - int
+	 - skinIndex
+	 - the skin the pilot uses 
+   * - int
+	 - camoIndex
+	 - the colors the pilot uses
+   * - int
+	 - primarySkinIndex
+	 - the skin the gun uses e.g. Masterworks kraber or the default skin
+   * - int
+	 - primaryCamoIndex
+	 - the colors the gun uses
+   * - int
+	 - secondarySkinIndex
+	 - the skin the gun uses e.g. Masterworks kraber or the default skin
+   * - int
+	 - secondaryCamoIndex
+	 - the colors the gun uses
+   * - int
+	 - weapon3SkinIndex
+	 - the skin the gun uses e.g. Masterworks kraber or the default skin
+   * - int
+	 - weapon3CamoIndex
+	 - the colors the gun uses
 
 
 TitanLoadoutDef meanwhile contain the  
@@ -29,6 +128,13 @@ TitanLoadoutDef meanwhile contain the
 ``voice, skinIndex, camoIndex, decalIndex, primarySkinIndex, primaryCamoIndex, difficulty, isPrime, primeSkinIndex, primeCamoIndex, primeDecalIndex, showArmBadge`` of the titan as well as 
 ``melee, coreAbility, primary, primaryAttachment, primaryMods, ordnance, ordnanceMods, specialMods, antirodeoMods, titanExecution``
 
+
+Limitations
+===========================================
+
+* loadouts cant exclude a weapon meaning a player will always spawn with a full kit. weapons/ordnance .... need to be taken away after the player spawns 
+* you can only change the player loadout while the player is dead otherwise a text will apear saying the loadout will change after they respawn 
+* when using LoadoutGracePeriodEnabled player can change their loadout after leaving the dropship negating your loadout changes 
 
 
 
@@ -67,6 +173,9 @@ variation 3
 .. code-block:: javascript
 
 	//there are Callbacks for when the player updates his loadout  
+	/* Note: 
+		be carefull with applying loadouts in the callbacks. can lead to infinet loops   
+	*/
 	void function AddCallback_OnUpdateDerivedPilotLoadout( void functionref( PilotLoadoutDef newPilotLoadout ) callbackFunc )
 
 	void function AddCallback_OnUpdateDerivedTitanLoadout( void functionref( TitanLoadoutDef newTitanLoadout ) callbackFunc )
@@ -75,82 +184,22 @@ variation 3
     // also gives the corresponding player as a parameter 
 	void function AddCallback_OnUpdateDerivedPlayerTitanLoadout( void functionref( entity player, TitanLoadoutDef newTitanLoadout ) callbackFunc )
 
-What does what 
+
+
+Examples
 ===========================================
 
-PilotLoadoutDef
-^^^^^^^^^^^^^^^^^
+The `Interstellar.BanMod <https://github.com/Neoministein/Interstellar.BanSystem >` is just using loadouts to ban weapons and equipment.
 
-.. list-table:: Title
-   :widths: 25 25 50
-   :header-rows: 1
+Example "Pilot classes"
+^^^^^^^^^^^^^^^^^^^^^^^^
+	a gamemode where a player can select a ``class`` in UI. We can get the selected class by calling the hypothetical function "getPilotClass"
 
-   * - type
-     - variable
-     - description
-   * - string
-     - name
-     - the UI name for this loadout
-   * - string
-     - suit
-     - the model the Pilot should use
-
-.. list-table:: PilotLoadoutDef
-   :widths: 25 25 50
-   :header-rows: 1
-
-   * - type
-  	 - variable
-     - description
-   * - string
-     - name
-     - the UI name for this loadout
-   * - string
-     - suit
-     - the model the Pilot should use
-   * - string
-     - race
-     - wether the Pilot is male or female 
-   * - string
-     - execution
-     - the execution
-   * - string
-	 - primary
-	 - the primary weapon not limited to time 
-   * - string
-	 - primaryAttachment
-	 - the scope of the primary weapon
-   * - string
-	 - primaryMod1
-	 - the first mod of the weapon **READ ONLY** e.g. fast reload 
-   * - string
-	 - primaryMod2
-	 - the second mod of the weapon **READ ONLY** e.g. fast reload 
-   * - string
-	 - primaryMod3
-	 - the third mod of the weapon **READ ONLY** e.g. fast reload
-
-string 			
-secondary
-string 			secondaryMod1
-string 			secondaryMod2
-string 			secondaryMod3
-string 			weapon3
-string 			weapon3Mod1
-string 			weapon3Mod2
-string 			weapon3Mod3
-string 			ordnance
-string 			passive1
-string 			passive2
-int				skinIndex
-int				camoIndex
-int 			primarySkinIndex
-int 			primaryCamoIndex
-int 			secondarySkinIndex
-int 			secondaryCamoIndex
-int 			weapon3SkinIndex
-int 			weapon3CamoIndex
-
+	the classes are 
+	* "gunner" a pilot wielding a L-star 
+	* "fastBoy"
+	* "sniper"  
+	
 
 Usefull stuff
 ===========================================
@@ -164,27 +213,3 @@ Usefull stuff
 	void function PrintPilotLoadoutIndex( entity player, int index )
 
 
-
-TitanLoadoutDef
-
-SetPersistentTitanLoadout()
-IsValidTitanLoadoutProperty()
-GetChildLoadoutProperties()
-GetParentLoadoutProperty()
-PrintTitanLoadout()
-
-
-
-.. list-table:: Title
-   :widths: 25 25 50
-   :header-rows: 1
-
-   * - type
-     - variable
-     - description
-   * - string
-     - name
-     - the UI name for this loadout
-   * - string
-     - suit
-     - the model the Pilot should use
