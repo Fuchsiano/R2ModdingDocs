@@ -27,7 +27,16 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
    * - string
      - race
      - wether the Pilot is male or female
-
+   * - string
+     - execution
+     - the execution
+   * - string
+     - primary
+     - the primary weapon. limited to Primary weapons NOTE: when changing this the mods and visors wont be changed so mods / visors exclusive to the gun will cause a server crash 
+   * - string
+	 - primary
+	 - the primary weapon 
+	 	 
 .. list-table:: PilotLoadoutDef
    :widths: 25 25 50
    :header-rows: 1
