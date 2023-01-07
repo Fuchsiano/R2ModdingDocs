@@ -10,8 +10,8 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
 * They are used to define a loadout a titan or pilot can spawn with.
 * They are used to persist the loadout.
 * They are **NOT** used to change a weapon on the fly 
- wut 
- 
+
+
 .. list-table:: PilotLoadoutDef
    :widths: 25 25 50
    :header-rows: 1
@@ -35,89 +35,89 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
      - primary
      - the primary weapon. limited to Primary weapons NOTE: when changing this the mods and visors wont be changed so mods / visors exclusive to the gun will cause a server crash 
    * - string
-	   - primary
-	   - the primary weapon 
+     - primary
+     - the primary weapon 
    * - string
-	   - primaryAttachment
-	   - the scope of the primary weapon
+     - primaryAttachment
+     - the scope of the primary weapon
    * - string
-	   - primaryMod1
-	   - the first mod of the weapon **READ ONLY** e.g. fast reload 
+     - primaryMod1
+     - the first mod of the weapon **READ ONLY** e.g. fast reload 
    * - string
-	   - primaryMod2
-	   - the second mod of the weapon **READ ONLY** e.g. fast reload 
+     - primaryMod2
+     - the second mod of the weapon **READ ONLY** e.g. fast reload 
    * - string
-	   - primaryMod3
-	   - the third mod of the weapon **READ ONLY** e.g. fast reload. Normaly Titanfall uses this for the Pro-Screen but this is a normal mod slot it can hold any mod
+     - primaryMod3
+     - the third mod of the weapon **READ ONLY** e.g. fast reload. Normaly Titanfall uses this for the Pro-Screen but this is a normal mod slot it can hold any mod
    * - array<string>
-	   - primaryMods
-	   - the mods the gun will use **change this to edit weapon mods**	 	 
+     - primaryMods
+     - the mods the gun will use **change this to edit weapon mods**        
    * - string
-	   - primaryAttachments
-	   - the Attachments a primary gun has e.g. scopes. Titanfall edits this array so you need to use the clone keyword 
+     - primaryAttachments
+     - the Attachments a primary gun has e.g. scopes. Titanfall edits this array so you need to use the clone keyword 
    * - string
-	   - secondary
-	   - the secondary weapon, ether a pistol or anti titan weapon but can also hold a primary weapon 
+     - secondary
+     - the secondary weapon, ether a pistol or anti titan weapon but can also hold a primary weapon 
    * - string
-	   - secondaryMod1
-	   - the first mod of the weapon **READ ONLY** e.g. fast reload 
+     - secondaryMod1
+     - the first mod of the weapon **READ ONLY** e.g. fast reload 
    * - string
-	   - secondaryMod2
-	   - the second mod of the weapon **READ ONLY** e.g. fast reload 
+     - secondaryMod2
+     - the second mod of the weapon **READ ONLY** e.g. fast reload 
    * - string
-	   - secondaryMod3
-	   - the third mod of the weapon **READ ONLY** e.g. fast reload 
+     - secondaryMod3
+     - the third mod of the weapon **READ ONLY** e.g. fast reload 
    * - array<string>
-	   - secondaryMods
-	   - the mods the gun will use **change this to edit weapon mods**
+     - secondaryMods
+     - the mods the gun will use **change this to edit weapon mods**
    * - string
-	   - weapon3
-	   - the third weapon, ether a pistol or anti titan weapon but can also hold a primary weapon 
+     - weapon3
+     - the third weapon, ether a pistol or anti titan weapon but can also hold a primary weapon 
    * - string
-	   - weapon3Mod1
-	   - the first mod of the weapon **READ ONLY** e.g. fast reload 
+     - weapon3Mod1
+     - the first mod of the weapon **READ ONLY** e.g. fast reload 
    * - string
-	   - weapon3Mod2
-	   - the second mod of the weapon **READ ONLY** e.g. fast reload 
+     - weapon3Mod2
+     - the second mod of the weapon **READ ONLY** e.g. fast reload 
    * - string
-	   - weapon3Mod3
-	   - the third mod of the weapon **READ ONLY** e.g. fast reload 
+     - weapon3Mod3
+     - the third mod of the weapon **READ ONLY** e.g. fast reload 
    * - array<string>
-	   - weapon3Mods
-	   - the mods the gun will use **change this to edit weapon mods**
+     - weapon3Mods
+     - the mods the gun will use **change this to edit weapon mods**
    * - string
-	   - ordnance
-	   - the grenade the pilot uses e.g. frag grenade 
+     - ordnance
+     - the grenade the pilot uses e.g. frag grenade 
    * - string
-	   - passive1
-	   - the first kit the pilot uses e.g. fast regen 
+     - passive1
+     - the first kit the pilot uses e.g. fast regen 
    * - string
-	   - passive2
-	   - the second kit the pilot uses e.g. kill report
+     - passive2
+     - the second kit the pilot uses e.g. kill report
    * - int
-	   - skinIndex
-	   - the skin the pilot uses 
+     - skinIndex
+     - the skin the pilot uses 
    * - int
-	   - camoIndex
-	   - the colors the pilot uses
+     - camoIndex
+     - the colors the pilot uses
    * - int
-	   - primarySkinIndex
-	   - the skin the gun uses e.g. Masterworks kraber or the default skin
+     - primarySkinIndex
+     - the skin the gun uses e.g. Masterworks kraber or the default skin
    * - int
-	 - primaryCamoIndex
-	 - the colors the gun uses
+     - primaryCamoIndex
+     - the colors the gun uses
    * - int
-	 - secondarySkinIndex
-	 - the skin the gun uses e.g. Masterworks kraber or the default skin
+     - secondarySkinIndex
+     - the skin the gun uses e.g. Masterworks kraber or the default skin
    * - int
-	 - secondaryCamoIndex
-	 - the colors the gun uses
+     - secondaryCamoIndex
+     - the colors the gun uses
    * - int
-	 - weapon3SkinIndex
-	 - the skin the gun uses e.g. Masterworks kraber or the default skin
+     - weapon3SkinIndex
+     - the skin the gun uses e.g. Masterworks kraber or the default skin
    * - int
-	 - weapon3CamoIndex
-	 - the colors the gun uses
+     - weapon3CamoIndex
+     - the colors the gun uses
 
 
 
@@ -198,48 +198,48 @@ Limitations
 How to obtain the Loadouts ?
 ===========================================
 
-First of all you should always use the variations sparingly to not trigger Callbacks unnecessary or even get stuck in an endless loop.	
+First of all you should always use the variations sparingly to not trigger Callbacks unnecessary or even get stuck in an endless loop.   
 Second you should always use the clone keyword when you want to edit the loadout, without creating a clone of the loadout in memory you would change the loadout permanently.     
 
 variation 1 
 
 .. code-block:: javascript
-	
-	// get the active Pilot / Titan loadouts 
-	PilotLoadoutDef function GetActivePilotLoadout( entity player )
+   
+   // get the active Pilot / Titan loadouts 
+   PilotLoadoutDef function GetActivePilotLoadout( entity player )
 
-	TitanLoadoutDef function GetActiveTitanLoadout( entity player )
+   TitanLoadoutDef function GetActiveTitanLoadout( entity player )
 
 
 variation 2
 
 .. code-block:: javascript
 
-	// get the loadout at index from all loadouts the player has
-	/*Note: 
-		a player has 10 Pilot loadouts
-		and 7 Titan loadouts
-	*/
-	PilotLoadoutDef function GetPilotLoadoutFromPersistentData( entity player, int loadoutIndex )
-	
-	TitanLoadoutDef function GetTitanLoadoutFromPersistentData( entity player, int loadoutIndex )
+   // get the loadout at index from all loadouts the player has
+   /*Note: 
+      a player has 10 Pilot loadouts
+      and 7 Titan loadouts
+   */
+   PilotLoadoutDef function GetPilotLoadoutFromPersistentData( entity player, int loadoutIndex )
+   
+   TitanLoadoutDef function GetTitanLoadoutFromPersistentData( entity player, int loadoutIndex )
 
 
 variation 3
 
 .. code-block:: javascript
 
-	//there are Callbacks for when the player updates his loadout  
-	/* Note: 
-		be carefull with applying loadouts in the callbacks. can lead to infinet loops   
-	*/
-	void function AddCallback_OnUpdateDerivedPilotLoadout( void functionref( PilotLoadoutDef newPilotLoadout ) callbackFunc )
+   //there are Callbacks for when the player updates his loadout  
+   /* Note: 
+      be carefull with applying loadouts in the callbacks. can lead to infinet loops   
+   */
+   void function AddCallback_OnUpdateDerivedPilotLoadout( void functionref( PilotLoadoutDef newPilotLoadout ) callbackFunc )
 
-	void function AddCallback_OnUpdateDerivedTitanLoadout( void functionref( TitanLoadoutDef newTitanLoadout ) callbackFunc )
+   void function AddCallback_OnUpdateDerivedTitanLoadout( void functionref( TitanLoadoutDef newTitanLoadout ) callbackFunc )
 
 
     // also gives the corresponding player as a parameter 
-	void function AddCallback_OnUpdateDerivedPlayerTitanLoadout( void functionref( entity player, TitanLoadoutDef newTitanLoadout ) callbackFunc )
+   void function AddCallback_OnUpdateDerivedPlayerTitanLoadout( void functionref( entity player, TitanLoadoutDef newTitanLoadout ) callbackFunc )
 
 
 
@@ -257,17 +257,17 @@ the classes are
 * "gunner" a pilot wielding a L-star 
 * "fastBoy"
 * "sniper"  
-	
+   
 
 Usefull stuff
 ===========================================
 
 .. code-block:: javascript
 
-	//Prints the titanloadout form player at index to the console 
-	void function PrintTitanLoadoutIndex( entity player, int index )
+   //Prints the titanloadout form player at index to the console 
+   void function PrintTitanLoadoutIndex( entity player, int index )
 
-	//Prints the pilotloadout form player at index to the console 
-	void function PrintPilotLoadoutIndex( entity player, int index )
+   //Prints the pilotloadout form player at index to the console 
+   void function PrintPilotLoadoutIndex( entity player, int index )
 
 
