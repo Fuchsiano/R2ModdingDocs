@@ -118,65 +118,115 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
 
 
 
+
+
 .. list-table:: TitanLoadoutDef
    :widths: 25 25 50
    :header-rows: 1
 
-   * - Heading row 1, column 1
-     - Heading row 1, column 2
-     - Heading row 1, column 3
-   * - Row 1, column 1
-     -
-     - Row 1, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3  
-TitanLoadoutDef meanwhile contain the  
+   * - variable
+     - type
+     - description
+   * - name
+     - string
+     - the name of the loadout
+   * - titanClass
+     - string
+     - the name of the used titan e.g. ion / northstar ... Note: changing this value results in many errors. Its better to load a different titan loadout from persistent vars 
+   * - primaryMod
+     - string
+     - mods for the primary weapon. Titanfall auto set this property based on the selectet titan, changing this can cause crashes  
+   * - special
+     - string
+     - the defensive ability. e.g vortex shield 
+   * - antirodeo
+     - string
+     - the middle ability of a titan e.g  Hover 
+   * - passive1
+     - string
+     - the first passive a titan has. Titanfall uses this for the shared passives e.g.  overcore
+   * - passive2
+     - string
+     - the second passive a titan has. Titanfall uses this for the unique passives e.g.  Tempered Plating
+   * - passive3
+     - string
+     - the third passive a titan has. Titanfall uses this for dome shield/ warpfall 
+   * - passive4
+     - string
+     - the fourth passive a titan has. Titanfall uses this only for Monarchs first upgrade core
+   * - passive5
+     - string
+     - the fith passive a titan has. Titanfall uses this only for Monarchs second upgrade core
+   * - passive6
+     - string
+     - the sixth passive a titan has. Titanfall uses this only for Monarchs third upgrade core
+   * - voice
+     - string
+     - the voice your titan has
+   * - skinIndex
+     - int
+     - the skin the titan uses. 
+   * - camoIndex
+     - int
+     - the camo the titan uses. 
+   * - decalIndex
+     - int
+     - the decal the titan uses. 
+   * - primarySkinIndex
+     - int
+     - the skin the gun uses. 
+   * - primaryCamoIndex
+     - int
+     - the camo the gun uses. 
+   * - difficulty
+     - int
+     - the difficulty used in frontier def 
+   * - showArmBadge
+     - int
+     - wether or not the arm badge should be displayed 
+   * - melee
+     - string
+     - what type of melee your titan uses 
+   * - coreAbility
+     - string
+     - what core your titan uses  
+   * - primary
+     - string
+     - what weapon your titan uses 
+   * - primaryAttachment
+     - string
+     - the Attachments used by the primary weapon
+   * - primaryMods
+     - array<string>
+     - the mods your weapon the primary weapon
+   * - ordnance
+     - string
+     - the faar right abuility of the titan e.g. laser shot
+   * - ordnanceMods
+     - array<string>
+     - the mods your ordnance have 
+   * - specialMods
+     - array<string>
+     - the mods your special have 
+   * - antirodeoMods
+     - array<string>
+     - the mods your antirodeo have 
+   * - isPrime
+     - string
+     - a string wether the titan should spawn as prime  	titan_is_not_prime or titan_is_prime     ask respawn about this choice 
+   * - titanExecution
+     - string
+     - the execution your titan will do  
+   * - primeSkinIndex
+     - int
+     - the prime and none prime titans have different index  
+   * - primeDecalIndex
+     - int
+     - the prime and none prime titans have different index  
+   * - primeCamoIndex
+     - int
+     - the prime and none prime titans have different index  
+
 
 ``name, titanClass, primeTitanRef, primaryMod, special,antirodeo  passive1, passive2, passive3, passive4, passive5, passive6`` thank you Monarch I want to KMS
 ``voice, skinIndex, camoIndex, decalIndex, primarySkinIndex, primaryCamoIndex, difficulty, isPrime, primeSkinIndex, primeCamoIndex, primeDecalIndex, showArmBadge`` of the titan as well as 
@@ -189,7 +239,7 @@ Limitations
 * loadouts cant exclude a weapon meaning a player will always spawn with a full kit. weapons/ordnance .... need to be taken away after the player spawns 
 * you can only change the player loadout while the player is dead otherwise a text will apear saying the loadout will change after they respawn 
 * when using LoadoutGracePeriodEnabled player can change their loadout after leaving the dropship negating your loadout changes 
-
+* stacking mods on the same weapon will result in a server crash
 
 
 How to obtain the Loadouts ?
