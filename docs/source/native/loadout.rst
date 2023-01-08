@@ -228,10 +228,6 @@ What are PilotLoadoutDef / TitanLoadoutDef Used for ?
      - the prime and none prime titans have different index  
 
 
-``name, titanClass, primeTitanRef, primaryMod, special,antirodeo  passive1, passive2, passive3, passive4, passive5, passive6`` thank you Monarch I want to KMS
-``voice, skinIndex, camoIndex, decalIndex, primarySkinIndex, primaryCamoIndex, difficulty, isPrime, primeSkinIndex, primeCamoIndex, primeDecalIndex, showArmBadge`` of the titan as well as 
-``melee, coreAbility, primary, primaryAttachment, primaryMods, ordnance, ordnanceMods, specialMods, antirodeoMods, titanExecution``
-
 
 Limitations
 ===========================================
@@ -293,7 +289,7 @@ variation 3
 Examples
 ===========================================
 
-The `Interstellar.BanMod <https://github.com/Neoministein/Interstellar.BanSystem/blob/master/Interstellar.BanSystem/mod/scripts/vscripts/_banLogic.gnut >` is just using loadouts to ban weapons and equipment.
+The `Interstellar.BanMod <https://github.com/Neoministein/Interstellar.BanSystem/blob/master/Interstellar.BanSystem/mod/scripts/vscripts/_banLogic.gnut>`_ is just using loadouts to ban weapons and equipment.
 
 Example "Pilot classes"
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -301,7 +297,7 @@ a gamemode where a player can select a ``class`` in UI. We can get the selected 
 
 the classes are 
 
-* "gunner" a pilot wielding a L-star 
+* "gunner" 
 * "fastBoy"
 * "sniper"  
    
